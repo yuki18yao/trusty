@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  // item image from database
+  h2 #{item.itemName}
+  p #{item.brand}
+  p $ #{item.price}
+  button Purchase
+  div  
+    h3 Details
+    table 
+      tr 
+        th Condition 
+        th Brand 
+        th Category 
+        th Posted
+      tr 
+        td #{item.condition}
+        td #{item.brand}
+        td #{item.category}
+        td #{item.updatedAt}
+    h3 Description
+      p(style="white-space:pre;") item.description
+    h3 Seller 
+      p #{users.username}

@@ -3,3 +3,101 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  div
+    if user
+      div 
+        a(href="/logout") Logout from #{user.username}
+      div 
+        a(href="/item/new") List an item
+      div 
+        a(href="/item/new") Shop the marketplace
+      div 
+        h2 Shop preloved items from people you can trust
+        <img class="thumbnail" src="/images/search-bar.webp" alt="Search Bar">
+      div 
+        h3 Explore what's listed 
+        each i in item 
+          a(href=`/item/${i.itemId}`) #{i.itemName} <br>
+          p $ #{i.price} <br>
+        div 
+          h4 Women 
+          a(href="/item/women") See all
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+          h4 Men 
+          a(href="/item/men") See all
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+          h4 Electronics  
+          a(href="/item/electronics") See all
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+            div 
+              img(class="thumbnail" src="/images/women-dress.webp" alt="Women Dress")
+              p Zara Dress
+              p $ 95
+    else
+      div 
+        a(href="/login") Login

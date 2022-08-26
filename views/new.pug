@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  form(method="post", action="/item")
+    div 
+      h3 商品の出品
+    div
+      h5 出品画像（最大10枚）
+      label(for="files") Select multiple files
+      input(type="file" id="files" multiple="multiple" accept="image/jpeg, image/png, image/jpg") 
+      output(id="result")
+      script(src="/javascripts/image-upload.js") 
+    div
+      h4 商品の詳細
+      div 
+        h5 カテゴリー
+        select(name="category")
+          option(value="") --Please choose an option--
+          option(value="women") Women
+          option(value="men") Men
+          option(value="electronics") Electronics
+          option(value="toys") Toys
+          option(value="home") Home
+          option(value="vintage") Vintage
+          option(value="beauty") Beauty
+          option(value="kids") Kids
+          option(value="sports") Sports
+          option(value="handmade") Handmade
+          option(value="office") Office
+          option(value="pet-supplies") Pet Supplies
+          option(value="garden") Garden
+          option(value="outdoor") Outdoor
+          option(value="arts-crafts") Arts/Crafts
+          option(value="tools") Tools
+          option(value="other") Other
+      div 
+        h5 ブランド
+        textarea(name="brand")
+      div 
+        h5 商品の状態
+        select(name="condition")
+          option(value="") --Please choose an option--
+          option(value="other") New 
+          option(value="like-new") Like New
+          option(value="good") Good
+          option(value="fair") Fair
+          option(value="poor") Poor
+    div
+      h4 商品名と説明
+      div 
+        h5 商品名
+        textarea(name="itemName")
+      div 
+        h5 商品の説明
+        textarea(name="description")
+    div 
+      h4 販売価格
+      <input name="price" placeholder="0"  type="number" min="0" inputmode="numeric">
+    button(type="submit") 出品する
